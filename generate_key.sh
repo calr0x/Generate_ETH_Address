@@ -25,6 +25,7 @@ i=1
 
 while [[ $i -le $TOTAL ]]
 do
+    echo "Key $i:${N1}"
     echo "${N1}Public Key  = 0x$ADDRESS"
     echo "${N1}Public Key  = 0x$ADDRESS" >> /root/eth_keys
     echo "Private Key = $PRIV${N1}"
