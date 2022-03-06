@@ -15,6 +15,8 @@ fi
 
 i=1
 
+echo "Total Keys: $1"
+
 while [[ $i -le $TOTAL ]]
 do
     KEY=$(openssl ecparam -name secp256k1 -genkey -noout | openssl ec -text -noout)
