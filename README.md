@@ -7,10 +7,10 @@ WARNING: Metamask will create a public key based on the generated private key. U
 To use:
 
 ```
-git clone https://github.com/calr0x/Generate_ETH_Address.git
+git clone https://github.com/calr0x/Generate_ETH_Private_Key.git
 ```
 ```
-cd Generate_ETH_Address
+cd Generate_ETH_Private_Key
 ```
 
 This will generate 1 key and write it to /root/eth_keys:
