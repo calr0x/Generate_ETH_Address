@@ -15,7 +15,7 @@ fi
 
 i=1
 
-echo "Total Keys: $1"
+echo "Total Keys: $TOTAL"
 
 while [[ $i -le $TOTAL ]]
 do
