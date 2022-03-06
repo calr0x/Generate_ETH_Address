@@ -21,7 +21,7 @@ do
     PUB=$(echo "$KEY" | grep pub -A 5 | tail -n +2 | tr -d '\n[:space:]:' | sed 's/^04//')
     PRIV=$(echo "$KEY" | grep priv -A 3 | tail -n +2 | tr -d '\n[:space:]:' | sed 's/^00//')
     ADDRESS=$(echo "$PUB" | sha256sum | tr -d ' -' | tail -c 41)
-    
+
     echo "Key $i:"
     echo "${N1}Public Key  = 0x$ADDRESS"
     echo "${N1}Public Key  = 0x$ADDRESS" >> /root/eth_keys
