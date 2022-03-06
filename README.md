@@ -1,4 +1,5 @@
-# Generate_ETH_Address
+#  Generate_ETH_Private_Key
+
 Generates a valid Ethereum privatekey for use with Metamask
 
 WARNING: Metamask will create a public key based on the generated private key. Use the private key and import into Metamask. Use the generated public address Metamask provides.
