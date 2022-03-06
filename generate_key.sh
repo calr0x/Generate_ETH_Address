@@ -24,9 +24,9 @@ do
     PRIV=$(echo "$KEY" | grep priv -A 3 | tail -n +2 | tr -d '\n[:space:]:' | sed 's/^00//')
     ADDRESS=$(echo "$PUB" | sha256sum | tr -d ' -' | tail -c 41)
 
-    echo "Key $i:" >> /root/eth_keys
+    echo "${N1}${N1}Key $i:" >> /root/eth_keys
     echo "${N1}Public Key  = 0x$ADDRESS"
-    echo "${N1}${N1}Public Key  = 0x$ADDRESS" >> /root/eth_keys
+    echo "Public Key  = 0x$ADDRESS" >> /root/eth_keys
     echo "Private Key = $PRIV${N1}"
     echo "Private Key = $PRIV" >> /root/eth_keys
     ((i = i + 1))
