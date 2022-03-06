@@ -10,5 +10,14 @@ PRIV=$(echo "$KEY" | grep priv -A 3 | tail -n +2 | tr -d '\n[:space:]:' | sed 's
 ADDRESS=$(echo "$PUB" | sha256sum | tr -d ' -' | tail -c 41)
 
 clear
-echo "${N1}Public Key  = 0x$ADDRESS"
-echo "Private Key = $PRIV${N1}"
+
+if [[ $1 -eq "" ]]; then
+    i=1
+fi
+
+for i in {1..$1};
+do
+    echo "${N1}Public Key  = 0x$ADDRESS"
+    echo "Private Key = $PRIV${N1}"
+    i=$((i-1))
+done
