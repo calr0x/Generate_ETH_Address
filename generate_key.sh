@@ -15,9 +15,9 @@ if [[ $1 -eq "" ]]; then
     i=1
 fi
 
-for i in {1..$1};
+while [[ $i -le $1 ]]
 do
     echo "${N1}Public Key  = 0x$ADDRESS"
     echo "Private Key = $PRIV${N1}"
-    i=$((i-1))
+    ((i = i + 1))
 done
