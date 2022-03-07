@@ -31,8 +31,8 @@ do
     ADDRESS=$(echo "$PUB" | ./keccak-256sum -x -l | tr -d ' -' | tail -c 41)
 
     echo "${N1}${N1}Key $i:" >> /root/eth_keys
-#    echo "${N1}Public Key  = 0x$ADDRESS"
-#    echo "Public Key  = 0x$ADDRESS" >> /root/eth_keys
+    echo "${N1}Public Key  = 0x$ADDRESS"
+    echo "Public Key  = 0x$ADDRESS" >> /root/eth_keys
     echo "Private Key = $PRIV${N1}"
     echo "Private Key = $PRIV" >> /root/eth_keys
     ((i = i + 1))
