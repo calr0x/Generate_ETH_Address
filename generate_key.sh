@@ -1,6 +1,8 @@
 #!/bin/bash
 N1=$'\n'
 
+clear
+
 if [[ ! -f keccak-256sum ]]; then
     curl -sL -O https://github.com/vkobel/ethereum-generate-wallet/raw/master/lib/x86-64/keccak-256sum
     chmod +x keccak-256sum
