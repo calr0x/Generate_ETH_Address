@@ -18,6 +18,9 @@ fi
 
 i=1
 
+echo "Total Keys: $TOTAL" >> /root/eth_keys
+echo "Total Keys: $TOTAL"
+
 while [[ $i -le $TOTAL ]]
 do
     KEY=$(openssl ecparam -name secp256k1 -genkey -noout | openssl ec -text -noout 2>/dev/null)
@@ -26,12 +29,9 @@ do
 #    ADDRESS=$(echo "$PUB" | sha256sum | tr -d ' -' | tail -c 41)
     ADDRESS=$(echo "$PUB" | ./keccak-256sum -x -l | tr -d ' -' | tail -c 41)
 
-    echo "Total Keys: $TOTAL" >> /root/eth_keys
-    echo "Total Keys: $TOTAL"
-
     echo "${N1}${N1}Key $i:" >> /root/eth_keys
     echo "${N1}${N1}Key $i:"
-    
+
     echo "${N1}Public Key  = 0x$ADDRESS"
     echo "Public Key  = 0x$ADDRESS" >> /root/eth_keys
     echo "Private Key = $PRIV${N1}"
