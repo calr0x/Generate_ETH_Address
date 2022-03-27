@@ -35,8 +35,8 @@ do
     echo "${N1}${N1}Key $i:"
 
     echo "${N1}Public Key  = 0x$ADDRESS"
-    echo "Public Key  = 0x$ADDRESS" >> /root/eth_keys
+    echo "Public Key  = 0x$ADDRESS" >> eth_keys
     echo "Private Key = $PRIV${N1}"
-    echo "Private Key = $PRIV" >> /root/eth_keys
+    echo "Private Key = $PRIV" >> eth_keys
     ((i = i + 1))
 done
