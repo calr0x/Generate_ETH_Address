@@ -8,8 +8,8 @@ if [[ ! -f keccak-256sum ]]; then
     chmod +x keccak-256sum
 fi
 
-if [[ -f /root/eth_keys ]]; then
-    rm /root/eth_keys
+if [[ -f eth_keys ]]; then
+    rm eth_keys
 fi
 
 if [[ $1 -eq "" ]]; then
@@ -20,7 +20,7 @@ fi
 
 i=1
 
-echo "Total Keys: $TOTAL" >> /root/eth_keys
+echo "Total Keys: $TOTAL" >> eth_keys
 echo "Total Keys: $TOTAL"
 
 while [[ $i -le $TOTAL ]]
@@ -31,7 +31,7 @@ do
 #    ADDRESS=$(echo "$PUB" | sha256sum | tr -d ' -' | tail -c 41)
     ADDRESS=$(echo "$PUB" | ./keccak-256sum -x -l | tr -d ' -' | tail -c 41)
 
-    echo "${N1}${N1}Key $i:" >> /root/eth_keys
+    echo "${N1}${N1}Key $i:" >> eth_keys
     echo "${N1}${N1}Key $i:"
 
     echo "${N1}Public Key  = 0x$ADDRESS"
